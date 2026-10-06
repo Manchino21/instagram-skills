@@ -101,7 +101,26 @@ Hermes Agent (Nous Research) follows the agentskills.io open standard and loads 
 git clone https://github.com/sergebulaev/instagram-skills.git ~/.hermes/skills/instagram-skills
 ```
 
-Coming from OpenClaw? `hermes claw migrate` imports these skills automatically. Then call `/<skill-name>` from any of your Hermes chat surfaces.
+Or use the skills CLI, which installs into Hermes among other agents:
+
+```bash
+npx skills add sergebulaev/instagram-skills
+```
+
+Coming from OpenClaw? `hermes claw migrate` imports these skills automatically.
+
+Then set up the optional pieces and start a new Hermes session:
+
+1. Install the helper library dependencies (needed for publishing and image generation):
+   ```bash
+   cd ~/.hermes/skills/instagram-skills
+   pip install -r requirements.txt
+   cp .env.example .env   # add PUBLORA_API_KEY, and optionally APIFY_TOKEN / PIXFARO_TOKEN
+   ```
+2. Call a skill with `/<skill-name>` from any of your Hermes chat surfaces, or just ask for what you need, for example "Write a caption for this Reel about [topic]".
+3. To update later, run `git pull` inside the cloned folder.
+
+The skills only write the copy. Instagram needs media on every post, so you supply the image or video, and nothing publishes until you approve the draft.
 
 ### Any agent (skills CLI)
 
