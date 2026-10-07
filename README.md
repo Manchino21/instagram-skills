@@ -380,4 +380,8 @@ Part of a family of AI social-media marketing skill bundles for Claude Code and 
 - [tiktok-skills](https://github.com/sergebulaev/tiktok-skills) - TikTok
 - [facebook-skills](https://github.com/sergebulaev/facebook-skills) - Facebook Pages
 
+### Pairs well with
+
+These skills write the caption and publish; they do not script or render the Reel itself. For Reel production (scripting, shot lists, on-screen text, cover briefs, hook A/B tests), [Ootto AI's claude-content-skills](https://github.com/ootto-ai/claude-content-skills) is a free MIT-licensed complement. Write the Reel with it, then bring the result here for the caption, the humanizer pass, and approval-gated publishing. For YouTube, use [youtube-skills](https://github.com/sergebulaev/youtube-skills) from the family above.
+
 Also: [Anthropic Skills repo](https://github.com/anthropics/skills), the `awesome-claude-skills` directory.
